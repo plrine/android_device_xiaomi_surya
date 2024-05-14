@@ -94,9 +94,6 @@ TARGET_KERNEL_ADDITIONAL_FLAGS := \
 TARGET_KERNEL_CONFIG := surya_defconfig vendor/debugfs.config
 TARGET_KERNEL_SOURCE := kernel/xiaomi/surya
 
-# LMKD
-TARGET_LMKD_STATS_LOG := true
-
 # Media
 TARGET_USES_ION := true
 
