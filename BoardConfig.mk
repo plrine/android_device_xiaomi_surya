@@ -14,8 +14,6 @@
 # limitations under the License.
 #
 
-BUILD_BROKEN_INCORRECT_PARTITION_IMAGES := true
-
 DEVICE_PATH := device/xiaomi/surya
 
 # Inherit from proprietary files
