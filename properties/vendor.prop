@@ -8,6 +8,9 @@ persist.vendor.audio.voicecall.speaker.stereo=true
 vendor.audio.feature.compr_voip.enable=false
 vendor.voice.path.for.pcm.voip=true
 
+# Camera
+vendor.camera.remapid=0 1 21 22 25 61 100 101
+
 # Display
 ro.surface_flinger.set_display_power_timer_ms=1000
 ro.surface_flinger.set_idle_timer_ms=500
