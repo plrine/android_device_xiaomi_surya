@@ -816,6 +816,7 @@ vendor/lib64/vendor.qti.hardware.radio.am@1.0.so|3d84dfd841e6bc918b8e92f3e8f4e45
 vendor/lib64/vendor.qti.hardware.radio.internal.deviceinfo@1.0.so|fc4ababd2cc8ff9f1f253194a5998a0596cf83aa
 vendor/lib64/vendor.qti.hardware.radio.lpa@1.0.so|cff3174157c2a536e1d4b69b2cd43e4c2c873f5d
 vendor/lib64/vendor.qti.hardware.radio.lpa@1.1.so|9164fa7d396bb8acb6abd5c703e4a840149b3812
+vendor/lib64/vendor.qti.hardware.radio.qcriNvOpt@1.0.so|1069868ebe9e6ff6fbe3fcdc8860d58970dccc4a
 vendor/lib64/vendor.qti.hardware.radio.qcrilhook@1.0.so|f293c5742455dd7873138472f0ab3c0ba2affd8b
 vendor/lib64/vendor.qti.hardware.radio.qtiradio@1.0.so|5112fa42a11ee4ab128f8c78e8c807712c9866a1
 vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.0.so|36bfbb8f0d97269ee53f554ad9287f648879545a
