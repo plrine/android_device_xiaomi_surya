@@ -370,7 +370,7 @@ vendor/lib64/camera/fdconfigvideo.bin
 vendor/lib64/camera/fdconfigvideolite.bin
 
 # Charger - sweet_k6a
-vendor/bin/hvdcp_opti|9cf5d4c597cc9cb333201f5e4dd12d996d3501d7
+vendor/bin/hvdcp_opti;RECOVERY_AVAILABLE|9cf5d4c597cc9cb333201f5e4dd12d996d3501d7
 
 # Certificate Authority - sweet_k6a
 vendor/app/CACertService/CACertService.apk|094253453718a261f863b6126b1bd365ca154fb5
