@@ -19,6 +19,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 # Add common definitions for Qualcomm
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
+# MiuiCamera
+$(call inherit-product-if-exists, device/xiaomi/miuicamera-surya/device.mk)
+
 # A/B OTA
 AB_OTA_UPDATER := false
 

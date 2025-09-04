@@ -4,6 +4,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# MiuiCamera
+-include device/xiaomi/miuicamera-surya/BoardConfig.mk
+
 DEVICE_PATH := device/xiaomi/surya
 
 # Inherit from proprietary files
