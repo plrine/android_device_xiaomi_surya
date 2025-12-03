@@ -75,17 +75,13 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_surya/com.nxp.mifare.xml
 
 # Overlay
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-aperture
-
-PRODUCT_ENFORCE_RRO_TARGETS += *
-
 PRODUCT_PACKAGES += \
     J20CFrameworks \
     J20CSystemUI \
     KarnaFrameworks \
     KarnaSettingsProvider \
     KarnaWifiResources \
+    SuryaApertureOverlay \
     SuryaFrameworks \
     SuryaSettingsProvider \
     SuryaWifiResources
