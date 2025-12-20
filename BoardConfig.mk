@@ -25,11 +25,6 @@ TARGET_OTA_ASSERT_DEVICE := surya,karna
 # Audio
 TARGET_PROVIDES_AUDIO_EXTNS := true
 
-# HIDL
-ODM_MANIFEST_SKUS += surya
-ODM_MANIFEST_SURYA_FILES := \
-    $(DEVICE_PATH)/configs/hidl/manifest-nfc.xml
-
 # Kernel
 TARGET_KERNEL_CONFIG += vendor/surya.config
 
