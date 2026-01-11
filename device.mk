@@ -24,6 +24,9 @@ $(call inherit-product-if-exists, vendor/xiaomi/surya-miuicamera/miuicamera.mk)
 PRODUCT_SHIPPING_API_LEVEL := 29
 
 # Audio
+PRODUCT_PACKAGES += \
+    sku_surya_audio_symlink
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml \
     $(LOCAL_PATH)/configs/audio/audio_platform_info_intcodec.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_intcodec.xml \
