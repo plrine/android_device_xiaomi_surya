@@ -609,12 +609,6 @@ vendor/lib64/vendor.qti.gnss@4.0-service.so|04233086636be1aeaaedf88d3126803b0c40
 vendor/lib64/vendor.qti.gnss@4.0.so|e38ae43982dc62bf48193a6c3eb2ae385adb37aa
 vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so|3ff445db2dd2db1a1068fe70a54a6c04fbdd3123
 
-# HotwordEnrollment - from vayu V13.0.8.0.SJUMIXM
-product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk;PRESIGNED|47cd4ed29ce7a556dcdf9b1be6675ddbbb7fca63
-product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk;PRESIGNED|3d8943911ae38e0604f46f34c1a295371b483af4
-system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml|563a58554d9c0dd0608552b644fbf74519a447bb
-system_ext/framework/com.android.hotwordenrollment.common.util.jar|c764b636e0be426a66be09dd08ab9c1921327ef0
-
 # IMS - sweet_k6a
 system_ext/lib64/lib-imsvideocodec.so|aeea873dbb3ba0de6021a3e9004734cff61b5372
 system_ext/lib64/lib-imsvt.so|dcf23823c74ae9844b6a5317f798b993c45b2e41
