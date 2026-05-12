@@ -37,11 +37,11 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.preference.PreferenceFragment;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.android.settingslib.applications.ApplicationsState;
+import com.android.settingslib.widget.SettingsBasePreferenceFragment;
 
 import org.lineageos.settings.R;
 
@@ -51,7 +51,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ThermalSettingsFragment extends PreferenceFragment
+public class ThermalSettingsFragment extends SettingsBasePreferenceFragment
         implements ApplicationsState.Callbacks {
 
     private AllPackagesAdapter mAllPackagesAdapter;
@@ -195,12 +195,22 @@ public class ThermalSettingsFragment extends PreferenceFragment
 
     private int getStateDrawable(int state) {
         switch (state) {
-            case ThermalUtils.STATE_PERFORMANCE:
-                return R.drawable.ic_thermal_performance;
+            case ThermalUtils.STATE_BENCHMARK:
+                return R.drawable.ic_thermal_benchmark;
+            case ThermalUtils.STATE_BROWSER:
+                return R.drawable.ic_thermal_browser;
             case ThermalUtils.STATE_CAMERA:
                 return R.drawable.ic_thermal_camera;
             case ThermalUtils.STATE_DIALER:
                 return R.drawable.ic_thermal_dialer;
+            case ThermalUtils.STATE_GAMING:
+                return R.drawable.ic_thermal_gaming;
+            case ThermalUtils.STATE_NAVIGATION:
+                return R.drawable.ic_thermal_navigation;
+            case ThermalUtils.STATE_STREAMING:
+                return R.drawable.ic_thermal_streaming;
+            case ThermalUtils.STATE_VIDEO:
+                return R.drawable.ic_thermal_video;
             case ThermalUtils.STATE_DEFAULT:
             default:
                 return R.drawable.ic_thermal_default;
@@ -213,7 +223,6 @@ public class ThermalSettingsFragment extends PreferenceFragment
         private ImageView icon;
         private View rootView;
         private ImageView stateIcon;
-        private ImageView touchIcon;
 
         private ViewHolder(View view) {
             super(view);
@@ -221,7 +230,6 @@ public class ThermalSettingsFragment extends PreferenceFragment
             this.mode = view.findViewById(R.id.app_mode);
             this.icon = view.findViewById(R.id.app_icon);
             this.stateIcon = view.findViewById(R.id.state);
-            this.touchIcon = view.findViewById(R.id.touch);
             this.rootView = view;
 
             view.setTag(this);
@@ -233,9 +241,14 @@ public class ThermalSettingsFragment extends PreferenceFragment
         private final LayoutInflater inflater;
         private final int[] items = {
                 R.string.thermal_default,
-                R.string.thermal_performance,
+                R.string.thermal_benchmark,
+                R.string.thermal_browser,
                 R.string.thermal_camera,
-                R.string.thermal_dialer
+                R.string.thermal_dialer,
+                R.string.thermal_gaming,
+                R.string.thermal_navigation,
+                R.string.thermal_streaming,
+                R.string.thermal_video
         };
 
         private ModeAdapter(Context context) {
@@ -311,25 +324,16 @@ public class ThermalSettingsFragment extends PreferenceFragment
 
             holder.mode.setAdapter(new ModeAdapter(context));
             holder.mode.setOnItemSelectedListener(this);
-            holder.touchIcon.setOnClickListener(v -> {
-                Intent intent = new Intent(getActivity(), TouchSettingsActivity.class);
-                intent.putExtra("appName", entry.label);
-                intent.putExtra("packageName", entry.info.packageName);
-                startActivity(intent);
-            });
 
             holder.title.setText(entry.label);
             holder.title.setOnClickListener(v -> holder.mode.performClick());
+
             mApplicationsState.ensureIcon(entry);
             holder.icon.setImageDrawable(entry.icon);
+
             int packageState = mThermalUtils.getStateForPackage(entry.info.packageName);
             holder.mode.setSelection(packageState, false);
             holder.mode.setTag(entry);
-            if (packageState == ThermalUtils.STATE_PERFORMANCE) {
-                holder.touchIcon.setVisibility(View.VISIBLE);
-            } else {
-                holder.touchIcon.setVisibility(View.INVISIBLE);
-            }
             holder.stateIcon.setImageResource(getStateDrawable(packageState));
         }
 
