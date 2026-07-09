@@ -196,6 +196,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/idc/,$(TARGET_COPY_OUT_VENDOR)/usr/idc)
 
+# ION
+$(call soong_config_set_bool,libion,legacy_impl,true)
+
 # IR
 PRODUCT_PACKAGES += \
     android.hardware.ir-service.lineage
