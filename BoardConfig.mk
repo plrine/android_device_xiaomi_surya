@@ -85,7 +85,7 @@ TARGET_KERNEL_CONFIG := vendor/sdmsteppe-perf_defconfig vendor/surya.config
 TARGET_KERNEL_SOURCE := kernel/xiaomi/surya
 
 # Partitions
--include vendor/lineage/config/BoardConfigReservedSize.mk
+-include vendor/halcyon/config/BoardConfigReservedSize.mk
 BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
 BOARD_BOOTIMAGE_PARTITION_SIZE := 134217728
 BOARD_CACHEIMAGE_PARTITION_SIZE := 402653184
