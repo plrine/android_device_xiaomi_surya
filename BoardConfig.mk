@@ -41,7 +41,7 @@ AUDIO_FEATURE_ENABLED_INSTANCE_ID := true
 AUDIO_FEATURE_ENABLED_PROXY_DEVICE := true
 TARGET_PROVIDES_AUDIO_EXTNS := true
 
-BOARD_SUPPORTS_OPENSOURCE_STHAL := true
+BOARD_SUPPORTS_OPENSOURCE_STHAL := false
 BOARD_SUPPORTS_SOUND_TRIGGER := true
 
 # Bootloader
@@ -69,6 +69,7 @@ ODM_MANIFEST_SURYA_FILES := \
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_SEPARATED_DTBO := true
+BOARD_DTBO_CFG := device/xiaomi/surya/dtbo.cfg
 
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom
 BOARD_KERNEL_CMDLINE += service_locator.enable=1
@@ -80,8 +81,8 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_MKBOOTIMG_ARGS := --header_version 2
 
-TARGET_KERNEL_CONFIG := vendor/sdmsteppe-perf_defconfig vendor/surya.config
-TARGET_KERNEL_SOURCE := kernel/xiaomi/surya
+TARGET_KERNEL_CONFIG := vendor/surya-perf_defconfig
+TARGET_KERNEL_SOURCE := kernel/qcom/sm8150
 
 # Partitions
 -include vendor/halcyon/config/BoardConfigReservedSize.mk
