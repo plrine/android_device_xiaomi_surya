@@ -24,6 +24,7 @@ $(call inherit-product, device/xiaomi/surya/device.mk)
 
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/halcyon/config/common.mk)
+PRODUCT_SYSTEM_EXT_PROPERTIES += ro.halcyon.soc.marketname="Snapdragon 732G"
 
 PRODUCT_NAME := halcyon_surya
 PRODUCT_DEVICE := surya
