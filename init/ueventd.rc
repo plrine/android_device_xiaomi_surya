@@ -65,6 +65,7 @@ firmware_directories /vendor/firmware_mnt/image/
 /dev/smcinvoke            0660   system     drmrpc
 /dev/adsprpc-smd          0664   system     system
 /dev/adsprpc-smd-secure   0644   system     system
+/dev/radio0               0644   system     system
 
 # qg
 /dev/qg                   0660  system     system
